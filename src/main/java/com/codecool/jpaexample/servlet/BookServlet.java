@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "UserServlet",  urlPatterns = {"/users", "/users/*"})
-public class UserServlet extends HttpServlet {
+@WebServlet(name = "BookServlet",  urlPatterns = {"/books", "/books/*"})
+public class BookServlet extends HttpServlet {
 
     ObjectMapper mapper = new ObjectMapper();
 

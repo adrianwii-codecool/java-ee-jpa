@@ -60,11 +60,11 @@ public class User {
         this.password = password;
     }
 
-    public Set<Book> getCars() {
+    public Set<Book> getBooks() {
         return books;
     }
 
-    public void setCars(Set<Book> books) {
+    public void setBooks(Set<Book> books) {
         this.books = books;
     }
 

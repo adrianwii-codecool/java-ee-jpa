@@ -1,6 +1,8 @@
 package com.codecool.jpaexample.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -13,6 +15,9 @@ public class User {
     private String name;
     private String email;
     private String password;
+
+    @ManyToMany(cascade = { CascadeType.ALL })
+    private Set<Book> books = new HashSet<>();
 
     public User() {
     }
@@ -53,6 +58,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Set<Book> getCars() {
+        return books;
+    }
+
+    public void setCars(Set<Book> books) {
+        this.books = books;
     }
 
     @Override
